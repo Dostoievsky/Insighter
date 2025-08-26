@@ -1181,4 +1181,9 @@ elif mainchoose in dct_variants['compare']:
 
 
 elif mainchoose in dct_variants['help']:
-    print('Инструкция:')
+    if os.path.exists('instruction.pdf'):
+        os.startfile('instruction.pdf')
+        sys.exit()
+    else:
+        print('На вашем устройстве нет файла с интрукцией. Вы можете скачать или посмотреть ее по ссылке: '
+              'https://github.com/Dostoievsky/Insighter')
